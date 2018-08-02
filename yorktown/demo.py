@@ -39,6 +39,8 @@ from yorktown.lib.utils import AnsiColor as color
 import subprocess
 import sys
 import os
+import logging
+logger = logging.getLogger(__name__)
 
 class DemoCommand(object):
     """Demo of Modular Execution

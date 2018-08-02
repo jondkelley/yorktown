@@ -21,6 +21,9 @@ from importlib import import_module
 from docopt import docopt
 from yorktown import __version__ as version
 from yorktown import MODULES
+import yorktown.lib.logginglib
+import logging
+logger = logging.getLogger(__name__)
 
 
 def main():
