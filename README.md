@@ -1,8 +1,20 @@
 # Yorktown
 
+```
+                      |
+                     -+-
+                   ---#---            U.S.S. Yorktown
+                   __|_|__              1943 - 1970
+                   \_____/      
+    _______________\_____/ _______________________________________
+    ||\__||\__||\__|___  |||\__||\__||\__|___ ||\__||\__||\__|__||
+    -^---------^--^----^___.-------------.___.--------.___.------
+    `-------------|-------------------------------|-------------'
+```
+
 ## Description
 
-*Yorktown* is a modular approach to hackystack. By placing commands in separate modules and doing dynamic imports, we will drastically increase code reliability. Modules isolate namespace to point that *if another project has a syntax error, it won't hurt you!* The libraries folder is the only point of shared namespace. This model also uses docopt to dynamically generate command arguments without fighting with argparse for hours on end.
+*Yorktown* is a modular approach to command automation. By placing commands in separate modules and doing dynamic imports, we will drastically increase code reliability. Modules isolate namespace to point that *if another project has a syntax error, it won't hurt you!* The libraries folder is the only point of shared namespace. This model also uses docopt to dynamically generate command arguments without fighting with argparse for hours on end.
 
 ## Code Structure
 
@@ -16,7 +28,13 @@ The `yorktown` project maintains an organized code structure
     │   ├── jenkins.py....................... module for jenkins command
     │   └── lib.............................. libraries
     │       ├── __init__.py.................. __MODULE__
+    │       └── libgit.py.................... git library
+    │       └── libjenkins.py................ jenkins library
     │       └── utils.py..................... utility functions
+
+## Action Shot
+
+![](/yorktown.png)
 
 ## Examples
 
