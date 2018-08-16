@@ -9,6 +9,15 @@ def get_arg_option(args):
                 isinstance(value, bool) and value):
             return key.replace('-', '')
 
+def shell_command(command):
+    """
+    runs a command with subprocess
+    returns a tuple (exitcode, stdout, stderr)
+    """
+    p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    (stdout, stderr) = p.communicate()
+    exit_code = p.wait()
+    return (exit_code, stdout, stderr)
 
 def print_arguements(args):
     """

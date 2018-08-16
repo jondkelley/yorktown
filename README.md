@@ -12,6 +12,7 @@ The `yorktown` project maintains an organized code structure
     │   ├── __init__.py...................... __MODULE__
     │   ├── cli.py........................... entry point
     │   ├── demo.py.......................... module for demo command
+    │   ├── gitexec.py....................... module for gitexec command
     │   └── lib.............................. libraries
     │       ├── __init__.py.................. __MODULE__
     │       └── utils.py..................... utility functions
@@ -65,3 +66,22 @@ Keep reading for more details about each command.
                                     [default: 1]
         -c CMD                      command to run
                                     [default: ps]
+
+
+### Commands for gitexec
+
+    % yorktown gitexec --run [-r REPOSITORY_URL, -b BRANCH, -t TAG, -i INTERPRETER, -c COMMAND, -a ARGS, -e ENVIRONMENT]
+    Runs command from a local git checkout
+
+    % yorktown gitexec -h
+    Print help
+
+    Options:
+        -h                                                 show this message
+        -r REPOSITORY_URL, --repo REPOSITORY_URL           repository URL
+        -b BRANCH, --branch BRANCH                         git branch to checkout (use tags/name for a tag)
+        -t TAG, --tag TAG                                  git tag to checkout
+        -i INTERPRETER, --interpreter INTERPRETER          optional interpreter i.e. python, bash, php
+        -c COMMAND, --command COMMAND                      command to run under branch
+        -a ARGS, --arguements ARGS                         arguements to pass as a string (use quotes) i.e. ("-i -o gcc.so")
+        -e ENVIRONMENT, --environment ENVIRONMENT          environment variables to export i.e. (HOME=/,CWD=/)

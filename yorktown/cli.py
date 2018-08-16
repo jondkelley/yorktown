@@ -11,7 +11,9 @@ Options:
   -v, --version             show version.
 
 Available yorktown commands:
-    demo   Demo example
+    demo            Demo example
+    gitexec         Run a command from a git checkout
+                    then delete the temporary directory
 
 See 'yorktown help <command>' for more information on a specific command.
 """
