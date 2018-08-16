@@ -13,6 +13,7 @@ The `yorktown` project maintains an organized code structure
     │   ├── cli.py........................... entry point
     │   ├── demo.py.......................... module for demo command
     │   ├── gitexec.py....................... module for gitexec command
+    │   ├── jenkins.py....................... module for jenkins command
     │   └── lib.............................. libraries
     │       ├── __init__.py.................. __MODULE__
     │       └── utils.py..................... utility functions
@@ -85,3 +86,21 @@ Keep reading for more details about each command.
         -c COMMAND, --command COMMAND                      command to run under branch
         -a ARGS, --arguements ARGS                         arguements to pass as a string (use quotes) i.e. ("-i -o gcc.so")
         -e ENVIRONMENT, --environment ENVIRONMENT          environment variables to export i.e. (HOME=/,CWD=/)
+
+### Commands for jenkins
+
+    % yorktown jenkins --showconfig [-j JOBNAME, -u USER, --pass PASSWORD]
+    Prints a jenkins XML configuration
+
+    % yorktown jenkins --build [-j JOBNAME, -p PARAMS]
+    Builds a jenkins job with parameters
+
+    % yorktown jenkins -h
+    Print help
+
+    Options:
+        -h                                show this message
+        -j JOBNAME, --jobname JOBNAME     job to run
+        -p PARAMS, --params PARAMS        job params as a json string
+        -u USER, --user USER              username
+        --pass PASSWORD                   password

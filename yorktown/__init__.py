@@ -11,4 +11,5 @@ __copyright__ = 'Copyright 2018 BoomTown LLC'
 MODULES = [
     'demo',
     'gitexec',
+    'jenkins',
 ]

@@ -14,6 +14,7 @@ Available yorktown commands:
     demo            Demo example
     gitexec         Run a command from a git checkout
                     then delete the temporary directory
+    jenkins         Builds a jenkins job with parameters
 
 See 'yorktown help <command>' for more information on a specific command.
 """
